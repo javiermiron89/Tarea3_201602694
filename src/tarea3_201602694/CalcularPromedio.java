@@ -13,8 +13,10 @@ import java.util.Scanner;
  */
 public class CalcularPromedio {
     
+    //Se declara la matriz de 6x6
     public int MatrizContador [][] = new int [6][6];
     
+    //Menu
     public void InicializarPromedio(){
         try{
         Menu menu = new Menu();
