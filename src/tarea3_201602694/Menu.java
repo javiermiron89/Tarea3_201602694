@@ -13,21 +13,18 @@ import java.util.Scanner;
  */
 public class Menu {
     
+    //Hacemos intancias para llamar a las demas clases
     Usuarios usuario = new Usuarios();
     ContadorDigitos contadordigitos = new ContadorDigitos();
     TresNumeros tresnumeros = new TresNumeros();
     CalcularPromedio calcularpromedio = new CalcularPromedio();
-    int matriz[][] = new int [5][5];
-    int fila;
-    int columna;
-    int contador = 0;
                          
     public void MenuPrincipal(){
-    try{
+    //Se genera un try para evitar errores al ingresar letras en lugar de numeros
+        try{
         Scanner lector = new Scanner(System.in);
         int opcion;
         do {
-            
             System.out.println("[IPC1]Tarea3_201602694\n");
             System.out.println("\033[36m1. Usuarios");
             System.out.println("\033[36m2. Contador de digitos");
@@ -36,6 +33,7 @@ public class Menu {
             System.out.println("\033[361m5. Salir");
             System.out.print("\033[32m-Seleccione una Opcion: ");
             opcion = lector.nextInt();
+            //El Switch es para el reconocimiento de la opcion ingresada por el usuario y responder a lo indicado debajo
             switch (opcion) {                
                 case 1:
                     SaltoLinea();
